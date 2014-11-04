@@ -11,7 +11,7 @@ if (!defined('E_USER_DEPRECATED')) {
     define('E_USER_DEPRECATED', 16384);
 }
 
-require_once("pgq/SimpleLogger.php");
+require_once __DIR__ . '/SimpleLogger.php';
 declare(ticks = 1);
 
 /**

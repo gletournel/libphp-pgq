@@ -1,5 +1,5 @@
 <?php
-require_once("pgq/PGQEvent.php");
+require_once __DIR__ . '/PGQEvent.php';
 
 // No sense is given nor necessary for those constants, as soon as there's no colision.
 define("PGQ_EVENT_OK", 1);

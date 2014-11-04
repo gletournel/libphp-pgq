@@ -1,5 +1,5 @@
 <?php
-require_once("pgq/PGQRemoteConsumer.php");
+require_once __DIR__ . '/PGQRemoteConsumer.php';
 
 /**
  * PGQEventRemoteConsumer is a PGQRemoteConsumer which handles nested

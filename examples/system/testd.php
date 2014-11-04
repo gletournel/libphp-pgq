@@ -1,6 +1,6 @@
 #! /usr/bin/php5
 <?php
-require_once("pgq/SystemDaemon.php");
+require_once __DIR__ . '/../../SystemDaemon.php';
 
 define("CONFIGURATION", "testd.conf");
 

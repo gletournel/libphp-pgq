@@ -1,6 +1,6 @@
 #! /usr/bin/php5
 <?php
-require_once("pgq/PGQConsumer.php");
+require_once __DIR__ . '/../../PGQConsumer.php';
 
 define("CONFIGURATION", "testq.conf");
 

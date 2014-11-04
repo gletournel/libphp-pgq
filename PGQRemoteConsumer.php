@@ -1,5 +1,5 @@
 <?php
-require_once("pgq/PGQConsumer.php");
+require_once __DIR__ . '/PGQConsumer.php';
 
 define("PGQ_TRIGGER_NAME", "ins_to_queue");
 define("PGQ_LAST_BATCH", "pgq_last_batch");
