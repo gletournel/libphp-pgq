@@ -378,7 +378,7 @@ abstract class SystemDaemon
     public function createpidfile()
     {
         if (file_exists($this->pidfile)) {
-            $this->error("Pidfile '%s' already exists", $this->pidfile);
+            $this->log->error("Pidfile '%s' already exists", $this->pidfile);
             $this->droppidfile();
         }
         $fd = fopen($this->pidfile, "w+");
