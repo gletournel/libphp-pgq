@@ -48,7 +48,7 @@ class SimpleLogger
         $this->open();
     }
 
-    function __destruct()
+    public function __destruct()
     {
         /* Only close the logfile when we opened it ourselves */
         if (!is_resource($this->logfile)) {
@@ -97,37 +97,37 @@ class SimpleLogger
         return $this->logfile_fd !== false;
     }
 
-    function debug()
+    public function debug()
     {
         $args = func_get_args();
         $this->_log(DEBUG, $args);
     }
 
-    function verbose()
+    public function verbose()
     {
         $args = func_get_args();
         $this->_log(VERBOSE, $args);
     }
 
-    function notice()
+    public function notice()
     {
         $args = func_get_args();
         $this->_log(NOTICE, $args);
     }
 
-    function warning()
+    public function warning()
     {
         $args = func_get_args();
         $this->_log(WARNING, $args);
     }
 
-    function error()
+    public function error()
     {
         $args = func_get_args();
         $this->_log(ERROR, $args);
     }
 
-    function fatal()
+    public function fatal()
     {
         $args = func_get_args();
         $this->_log(FATAL, $args);
@@ -154,7 +154,7 @@ class SimpleLogger
      *
      * @return string
      */
-    function strlevel($level)
+    public function strlevel($level)
     {
         switch ($level) {
             case DEBUG:

@@ -509,7 +509,7 @@ abstract class SystemDaemon
      *
      * @return bool
      */
-    function phpFault($errno, $errstr, $errfile, $errline)
+    public function phpFault($errno, $errstr, $errfile, $errline)
     {
         $message = "PHP: " . strip_tags($errstr) . " in {$errfile}:{$errline}";
 
@@ -553,7 +553,7 @@ abstract class SystemDaemon
      *
      * @param Exception $exception
      */
-    function exceptFault($exception)
+    public function exceptFault($exception)
     {
         $trace = $exception->getTrace();
         $message = $exception->getMessage();
