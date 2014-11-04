@@ -1,18 +1,69 @@
 <?php
 
 /**
- * PGQEvent stores URLencoded data and provides simple API
- * to access its fields.
+ * PGQEvent stores URLencoded data and provides simple API to access its fields.
  */
 class PGQEvent
 {
+    /**
+     * @var int
+     */
     public $id;
+
+    /**
+     * @var int
+     */
+    public $tag;
+
+    /**
+     * @var string
+     */
     public $time;
+
+    /**
+     * @var string
+     */
     public $txid;
+
+    /**
+     * @var int
+     */
     public $retry;
+
+    /**
+     * @var int
+     */
+    public $retry_delay;
+
+    /**
+     * @var string
+     */
     public $type;
+
+    /**
+     * @var string
+     */
     public $table;
+
+    /**
+     * @var array
+     */
     public $data;
+
+    /**
+     * @var string
+     */
+    public $failed_reason;
+
+    /**
+     * @var string
+     */
+    public $failed_time;
+
+    /**
+     * @var SimpleLogger
+     */
+    private $log;
 
     /**
      * @param SimpleLogger $log
