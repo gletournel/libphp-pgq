@@ -188,7 +188,7 @@ abstract class PGQInteractiveConsumer
 
     protected function finish_batch($batch_id)
     {
-        return PGQ::next_batch($this->log, $this->pg_src_con, $batch_id);
+        return PGQ::finish_batch($this->log, $this->pg_src_con, $batch_id);
     }
 
     protected function get_batch_events($batch_id)
