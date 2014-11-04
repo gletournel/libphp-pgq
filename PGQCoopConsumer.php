@@ -74,9 +74,9 @@ abstract class PGQCoopConsumer extends PGQConsumer
     {
         $sql = sprintf(
             "SELECT pgq_coop.unregister_subconsumer('%s', '%s', '%s', 0);",
-            pg_escape_string($qname),
-            pg_escape_string($cname),
-            pg_escape_string($sname)
+            pg_escape_string($this->qname),
+            pg_escape_string($this->cname),
+            pg_escape_string($this->sname)
         );
 
         $this->log->verbose("%s", $sql);

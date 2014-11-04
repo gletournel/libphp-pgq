@@ -208,26 +208,26 @@ abstract class PGQInteractiveConsumer
 
     protected function failed_event_list()
     {
-        return PGQ::failed_event_list($this->log, $this->pg_src_con, $qname, $cname);
+        return PGQ::failed_event_list($this->log, $this->pg_src_con, $this->qname, $this->cname);
     }
 
     protected function failed_event_delete_all()
     {
-        return PGQ::failed_event_delete_all($this->log, $this->pg_src_con, $qname, $cname);
+        return PGQ::failed_event_delete_all($this->log, $this->pg_src_con, $this->qname, $this->cname);
     }
 
     protected function failed_event_delete($event_id)
     {
-        return PGQ::failed_event_delete($this->log, $this->pg_src_con, $qname, $cname, $event_id);
+        return PGQ::failed_event_delete($this->log, $this->pg_src_con, $this->qname, $this->cname, $event_id);
     }
 
     protected function failed_event_retry_all()
     {
-        return PGQ::failed_event_retry_all($this->log, $this->pg_src_con, $qname, $cname);
+        return PGQ::failed_event_retry_all($this->log, $this->pg_src_con, $this->qname, $this->cname);
     }
 
     protected function failed_event_retry($event_id)
     {
-        return PGQ::failed_event_retry($this->log, $this->pg_src_con, $qname, $cname, $event_id);
+        return PGQ::failed_event_retry($this->log, $this->pg_src_con, $this->qname, $this->cname, $event_id);
     }
 }

@@ -452,7 +452,7 @@ abstract class PGQ
         $resultset = pg_fetch_all($r);
 
         if ($resultset === false) {
-            $log->notice("failed_event_list(%d) got 'False' (empty list or error)", $batch_id);
+            $log->notice("failed_event_list(%s, %s) got 'False' (empty list or error)", $qname, $cname);
             return false;
         }
 
