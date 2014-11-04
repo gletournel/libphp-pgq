@@ -104,6 +104,8 @@ abstract class PGQRemoteConsumer extends PGQConsumer
         } elseif ($batch_done === false) {
             return $events;
         }
+
+        return false;
     }
 
     /**
