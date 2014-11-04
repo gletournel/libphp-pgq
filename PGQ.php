@@ -84,7 +84,6 @@ abstract class PGQ
             $log->error("Could not get queue info");
             return false;
         }
-        $queues = array();
         $resultset = pg_fetch_all($r);
 
         if ($resultset === false) {
