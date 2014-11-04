@@ -112,6 +112,13 @@ abstract class PGQConsumer extends SystemDaemon
     }
 
     /**
+     * @param PGQEvent $event
+     *
+     * @return int
+     */
+    abstract public function process_event(&$event);
+
+    /**
      * Optionnal hook
      *
      * @param PGQEvent $event
