@@ -516,11 +516,11 @@ abstract class PGQ
             $event = new PGQEvent($log, pg_fetch_assoc($result, 0));
             echo $event . "\n";
             return true;
-        } else {
-            $log->warning("failed_event_delete('%s', '%s', %d) did not get 1 row.", $qname, $cname, $event_id);
-            return false;
         }
-        return true;
+
+        $log->warning("failed_event_delete('%s', '%s', %d) did not get 1 row.", $qname, $cname, $event_id);
+
+        return false;
     }
 
     /**
@@ -577,10 +577,10 @@ abstract class PGQ
             $event = new PGQEvent($log, pg_fetch_assoc($result, 0));
             echo $event . "\n";
             return true;
-        } else {
-            $log->error("failed_event_retry('%s', '%s', %d) did not get 1 row.", $qname, $cname, $event_id);
-            return false;
         }
-        return true;
+
+        $log->error("failed_event_retry('%s', '%s', %d) did not get 1 row.", $qname, $cname, $event_id);
+
+        return false;
     }
 }

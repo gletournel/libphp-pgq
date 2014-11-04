@@ -617,14 +617,11 @@ abstract class PGQConsumer extends SystemDaemon
         if (count($consumers) > 1) {
             $this->log->notice("Some other consumers are registered, unregistering %s.", $this->cname);
             return true;
-        } else {
-            // We are the only one consumer
-            $this->log->warning(
-                "This %s consumer is the only one registered, use --force to unregister it.",
-                $this->cname
-            );
-            return false;
         }
+
+        // We are the only one consumer
+        $this->log->warning("This %s consumer is the only one registered, use --force to unregister it.", $this->cname);
+
         return false;
     }
 
